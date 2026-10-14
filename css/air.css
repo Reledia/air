@@ -1,9 +1,16 @@
+@import "flexoki.css";
+
+:root {
+  background-color: var(--flexoki-black);
+  color-scheme: dark;
+}
+
 @media print {
   *,
   *:before,
   *:after {
     background: transparent !important;
-    color: #000 !important;
+    color: var(--flexoki-black) !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -28,7 +35,7 @@
 
   pre,
   blockquote {
-    border: 1px solid #999;
+    border: 1px solid var(--flexoki-500);
     page-break-inside: avoid;
   }
 
@@ -145,15 +152,20 @@ textarea {
   max-width: 100%;
 }
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,300);
+@import url(https://github.com/githubnext/monaspace/blob/main/fonts/Web%20Fonts/NerdFonts%20Web%20Fonts/Monaspace%20Neon/MonaspaceNeonNF-Italic.woff2);
 
 body {
-  color: #444;
-  font-family: 'Open Sans', Helvetica, sans-serif;
+  display: flex;
+  flex-flow: column;
+  color: var(--flexoki-600);
+  font-family: 'MonaspaceNeonNF', Helvetica, sans-serif;
   font-weight: 300;
   margin: 6rem auto 1rem;
   max-width: 48rem;
-  text-align: center;
+}
+
+body > * {
+  display: inherit;
 }
 
 img {
@@ -161,39 +173,49 @@ img {
   height: 200px;
   margin: 0 auto;
   width: 200px;
+  align-self: center;
 }
+
+p {
+  display: inline;
+}
+
 
 a,
 a:visited {
-  color: #3498db;
+  color: var(--flexoki-blue-400);
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: #2980b9;
+  color: var(--flexoki-blue-200);
 }
 
 pre {
-  background-color: #fafafa;
+  background-color: var(--flexoki-900);
+  color: var(--flexoki-300);
   padding: 1rem;
   text-align: left;
 }
 
 blockquote {
   margin: 0;
-  border-left: 5px solid #7a7a7a;
+  border-left: 5px solid var(--flexoki-500);
   font-style: italic;
   padding: 1.33em;
   text-align: left;
+  flex-direction: column;
 }
 
 ul,
 ol,
 li {
   text-align: left;
+  color: var(--flexoki-200);
+  flex-direction: column;
 }
 
 p {
-  color: #777;
+  color: var(--flexoki-200);
 }
